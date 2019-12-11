@@ -1,61 +1,147 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>LuGal</title>
+    <link rel="stylesheet" href="resetstyle.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="megamenu.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- below are slider styles & links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="responsiveslider.css">
 </head>
 
-<body>
-
-    <div class="wrapper">
-        <ul class="social-icons">
-            <a href="https://www.facebook.com/lugalvaopelomundo/" class="share-btn facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/lugalvaopelomundo/?hl=en" class="share-btn instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UC8_1_qD2MJ6CoqO_rVNIaFw" class="share-btn youtube">
-                <i class="fa fa-youtube"></i>
-            </a>
-        </ul>
-    </div>
-
+<body class="wrapper" style="background: white;">
 
     <header>
         <nav>
             <ul>
-                <strong>
-                <li><a href="index.html">home</a></li>
-                <li><a href="pages/blog.html">blog</a></li>
-                <li><a href="pages/shop.html">shop</a></li>
                 <li class="logo"><a href="index.html">Lu Gal Pelo Mundo Logo</a></li>
-                </strong>
             </ul>
         </nav>
     </header>
 
+  
+    <div class="mega-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a>
+                <div class="sub_menu">
+                    <div class="col">
+                        <img src="col1.jpg" alt="luiza-dublin-shouk">
+                        <p>I Love Luiza's New Hair</p>
+                    </div>
+                    <div class="col">
+                        <img src="col2.jpg" alt="luiza-dublin-national-galery">
+                        <p>I Love Doors</p>
+                    </div>
+                    <div class="col">
+                        <img src="col3.jpg" alt="luiza-dublin-shouk">
+                        <p>I Love Paintings</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+    </div>
+
     <section class="features">
         <Figure>
             <img src="pictures/greece.jpg" alt="greece zakynthos navagio shipwreck beach">
-            <figcaption>Greece</figcaption>
+            <figcaption><small>Greece</small><br><hr>"Transport yourself<br>into a world of culture,<br>cuisine and relaxation."</figcaption>
         </Figure>
 
         <Figure>
             <img src="pictures/budapest.jpg" alt="budapest city break budget">
-            <figcaption>Budapest</figcaption>
+            <figcaption><small>Hungary</small><br><hr>Visit Budapest for an authentic, affordable European experience</figcaption>
         </Figure>
 
         <Figure>
             <img src="pictures/iceland.jpg" alt="iceland hiking holiday trip">
-            <figcaption>Iceland</figcaption>
+            <figcaption><small>Iceland</small><br><hr>Explore the otherworldly<br>landscapes of Iceland on<br>the Laugavegur Trail</figcaption>
         </Figure>
     </section>
 
-    <footer>Lu Pelo Mundo. Email: lupelomundo.zinha</footer>
+    <div class="divider"><span></span><span>Check me out on youtube</span><span></span></div>
+
+    <div class="ytube">
+            <div class="wrapper2">
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/OAdsTqQMM_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="wrapper2">
+                <div class="videowrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpqwPrZD_6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="wrapper2">
+                <div class="videowrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jmaHBYFJP8Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+    </div>
+
+    <div class="divider"><span></span><span>Popular Posts</span><span></span></div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <!-- Slide One -->
+              <!-- d-none -->
+              <div class="carousel-item active" style="background-image: url('iceland1.jpeg')">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>First Slide</h3>
+                  <p>This is a description for the first slide.</p>
+                </div>
+              </div>
+              <!-- Slide Two -->
+              <div class="carousel-item" style="background-image: url('iceland2.jpeg')">
+              </div>
+              <!-- Slide Three -->
+              <div class="carousel-item" style="background-image: url('iceland3.jpeg')">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+    <footer>
+        <p>Lu Pelo Mundo. Email: lupelomundo.zinha</p>
+
+        <ul class="social-icons">
+                <a href="https://www.facebook.com/lugalvaopelomundo/" class="share-btn facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/lugalvaopelomundo/?hl=en" class="share-btn instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC8_1_qD2MJ6CoqO_rVNIaFw" class="share-btn youtube">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </ul>
+
+    </footer>
 
 </html>
