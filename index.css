@@ -1,33 +1,46 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: #e7e7e7;
 }
-/* Top Bar */
 
-/** Social Button CSS **/
-
-.share-btn {
-    display: inline-block;
-    color: #ffffff;
-    border: none;
-    padding: 0.5em;
-    width: 4em;
-    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-    outline: none;
-    text-align: center;
-    font-size: 20px;
+.body a:hover {
+    color: blue;
     cursor: pointer;
 }
 
-.share-btn:hover {
-  color: #eeeeee;
+/* Nav */
+
+nav {
+    position: fixed;         /* Keeps nav bar on screen while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
 }
 
-.share-btn:active {
-  position: relative;
-  top: 2px;
-  box-shadow: none;
-  color: #e2e2e2;
-  outline: none;
+nav .nav-logo {
+    float: left;
+}
+
+nav .nav-logo img {
+    height: 40px;
+    transition: .5s;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 /* Header */
@@ -66,26 +79,26 @@ header .logo a {
     text-indent: -10000px;
 }
 
-header nav ul {
+header ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-header nav ul li {
+header ul li {
     display: inline-block;
     margin-right: 5%;
 }
 
-header nav ul li:last-child {
+header ul li:last-child {
     float: right;
 }
 
-header nav ul li:first-child {
+header ul li:first-child {
     margin-left: 0;
 }
 
-header nav ul a:hover {
+header ul a:hover {
     text-decoration: underline;
 }
 
@@ -115,6 +128,98 @@ header nav ul a:hover {
     }
 }
 
+/* MEGA MENU */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;            /* box-sizing: ensures padding & boarder get included into width of element */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.mega-menu {
+    width: 100%;
+    height: 60px;
+}
+
+.mega-menu ul {
+    width: 100%;
+    height: 100%;
+    background: #050405;
+    line-height: 59px;
+    text-align: center;
+    position: relative;
+}
+
+.mega-menu ul li {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 1px 15px 0 15px;
+}
+
+.mega-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 12px;
+    display: block;     /* disply: block; ensures cursor becomes pointer over whole element, not just over spript */
+}
+
+.mega-menu ul li .sub_menu {
+    position: absolute;
+    background: #ad9da6;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 24px;
+    visibility: hidden;
+    z-index: 88888;
+}
+
+.col p {
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-size: larger;
+}
+
+.mega-menu ul li:hover {
+    background: #ad9da6;
+}
+
+.mega-menu ul li:hover a{
+    color: #ca914e;
+}
+
+.mega-menu ul li:hover .sub_menu{
+    visibility: visible;
+}
+
+.mega-menu ul li .sub_menu .col img {
+    width: 300px;
+    height: 300px;
+    display: block;
+}
+
+.mega-menu ul li .sub_menu p {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* /MEGA MENU */
+
 /* Features */
 
 .features {
@@ -124,12 +229,23 @@ header nav ul a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .features figure {
     margin: auto;
     text-align: center;
     text-transform: uppercase;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 600ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
 }
 
 .features figure img {
@@ -141,6 +257,7 @@ header nav ul a:hover {
 
 .features figure figcaption {
     max-width: 250px;
+    margin: auto;
 }
 
 .hr {
@@ -152,9 +269,159 @@ header nav ul a:hover {
 
 /* Responsive Rules */
 
-@media screen and (max-width: 690px) {
-    
+@media screen and (max-width: 595px) {
+    .features figure {
+        position: relative;
+        width: 50%;
+        left: 25%;
+        display: block;
+        
+        margin: 20px 0;       /* WARNING: position relative in this section will make megamenu dropdown to background */
+    }
 }
+
+/* /features */
+
+/* ABOUT ME */
+
+.about-me {
+    height: 800px;
+    background: rgb(252, 234, 195);
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 100px;
+}
+
+.main {
+    width: 80%;
+    position: relative;
+    display: inline;
+}
+
+.main h3 strong {
+    font-family: fantasy;
+    font-size: 38px!important;
+    line-height: 38px!important;
+    color: #dc5127!important;
+}
+
+.main p {
+    font-size: 27px;
+    font-family: serif;
+}
+
+.from-left {
+    float: left;
+    transform: translateX(-100%)   /* moves content */
+}
+
+.from-right {
+    float: left;
+    transform: translateX(100%)
+}
+
+.from-left,
+.from-right {
+    transition: opacity 1000ms ease-in, transform 800ms ease-in;
+    opacity: 0;
+    display: inline;
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* /About Me */
+
+/* Post Slider */
+
+.slider-container {
+    height: 600px;
+    background: darkcyan;
+}
+
+.post-slider {
+    position: relative;
+    height: 400px;
+    padding-top: 100px;
+}
+
+.post-slider h2 {
+    margin: 0;
+    color: white;
+}
+
+.post-slider a {
+    margin: 0;
+    color: white;
+}
+
+.post-slider a:hover {
+    margin: 0;
+    color: rgb(126, 186, 243);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.post-slider .next {
+    position: absolute;     /* next button will be positioned absolute (relative to .post-slider container */
+    top: 40%;               /* positions the arrows at the right height relative to container */
+    right: 30px;
+    font-size: 2em;
+    color: rgb(65, 53, 53);
+    cursor: pointer;
+}
+
+.post-slider .prev {
+    position: absolute;     /* prev button will be positioned absolute (relative to .post-slider container */
+    top: 40%;
+    left: 30px;
+    font-size: 2em;
+    color: rgb(65, 53, 53);
+    cursor: pointer;
+}
+
+.post-slider .post-wrapper {
+    width: 84%;             /* setting width will leave a gap between slider div and side of page */
+    height: auto;
+    margin: 0 auto;         /* setting margin auto ensures div is centered on page */
+    overflow: hidden;
+    padding: 50px 0 10px 0;
+}
+
+.post-slider .post-wrapper .post {
+    width: 300px;
+    height: 380px;
+    margin: 0 10px;
+    display: inline-block;
+    background: darkcyan;
+    box-shadow: 1rem 1rem 1rem --1rem rgb(207, 94, 94);
+}
+
+.post-slider .post-wrapper .post .post-info {
+    height: 80px;     /* this is the remaining space in the .post div, which isnt taken up by img*/
+    color: white;
+    background: darkcyan;
+}
+
+.post-slider .post-wrapper .post .slider-image {
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* //Post Slider */
 
 /* Youtube Section */
 
@@ -162,7 +429,8 @@ header nav ul a:hover {
     display: flex;
     padding-left: 5%;
     padding-right: 5%;
-
+    padding-top: 100px;
+    padding-bottom: 150px;
 }
 
 .wrapper2 {
@@ -226,10 +494,46 @@ header nav ul a:hover {
 
 /* Footer */
 
-footer {
+.footer-end footer {
+    display: flex;
     background: black;
     color: grey;
     font-size: 14px;
-    padding: 20px 20px;
     text-align: center;
+}
+
+.footer-end footer p {
+    left: 0;
+}
+
+.footer-end footer ul {
+    position: absolute;
+    right: 0;
+    margin-bottom: 0;
+}
+/* Social Button CSS */
+
+.footer-end footer ul .share-btn {
+    display: inline-block;
+    color: #ffffff;
+    border: none;
+    padding: 0 0.5em 0 0.5em;
+    width: 4em;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.share-btn:hover {
+  color: #eeeeee;
+}
+
+.share-btn:active {
+  position: relative;
+  top: 2px;
+  box-shadow: none;
+  color: #e2e2e2;
+  outline: none;
 }

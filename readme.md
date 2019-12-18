@@ -1,5 +1,9 @@
 # Lu-Pelo-Mundo
 
-slider guide: https://www.youtube.com/watch?v=iiUtzrC5BPE&t=0s
+Large slider guide: https://www.youtube.com/watch?v=iiUtzrC5BPE&t=0s
 
-Youtube Guide: https://www.youtube.com/watch?v=OOy764mDtiA
+Youtube section Guide: https://www.youtube.com/watch?v=OOy764mDtiA
+
+Slick slider guide:
+https://www.youtube.com/watch?v=S05EWIHAVcc
+http://kenwheeler.github.io/slick/

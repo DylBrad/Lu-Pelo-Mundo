@@ -7,24 +7,42 @@
     <title>LuGal</title>
     <link rel="stylesheet" href="resetstyle.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="megamenu.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- below are slider styles & links -->
+    <!-- below are large slider styles & links -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="responsiveslider.css">
+    <!-- Font Awesome for Slick SLider arrows -->
+    <script src="https://kit.fontawesome.com/80cd69671c.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="wrapper" style="background: white;">
 
+    <nav>
+        <div class="nav-logo">
+            <img src="pictures/LogoMakr.png" alt="">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">VanLife</a></li>
+        </ul>
+    </nav>
+    <section class="sec1"></section>
+    <section class="sec2"></section>
+    <section class="sec3"></section>
+    <section class="sec4"></section>
+    <section class="sec5"></section>
+
     <header>
-        <nav>
             <ul>
+                <!-- *OUT OF SERVICE
                 <li class="logo"><a href="index.html">Lu Gal Pelo Mundo Logo</a></li>
+                -->
             </ul>
-        </nav>
     </header>
 
   
@@ -34,15 +52,17 @@
             <li><a href="#">News</a>
                 <div class="sub_menu">
                     <div class="col">
-                        <img src="col1.jpg" alt="luiza-dublin-shouk">
-                        <p>I Love Luiza's New Hair</p>
+                        <a href="pages/BeloHorizontePost/post1.html">
+                            <img src="pictures/col1.jpg" alt="belo-horizonte-article">
+                            <p><strong>6 reasons to visit Belo Horizonte</strong></p>
+                        </a>
                     </div>
                     <div class="col">
-                        <img src="col2.jpg" alt="luiza-dublin-national-galery">
+                        <img src="pictures/col2.jpg" alt="luiza-dublin-national-galery">
                         <p>I Love Doors</p>
                     </div>
                     <div class="col">
-                        <img src="col3.jpg" alt="luiza-dublin-shouk">
+                        <img src="pictures/col3.jpg" alt="luiza-dublin-shouk">
                         <p>I Love Paintings</p>
                     </div>
                 </div>
@@ -54,24 +74,119 @@
         </ul>
     </div>
 
-    <section class="features">
-        <Figure>
-            <img src="pictures/greece.jpg" alt="greece zakynthos navagio shipwreck beach">
-            <figcaption><small>Greece</small><br><hr>"Transport yourself<br>into a world of culture,<br>cuisine and relaxation."</figcaption>
+    <section class="features columns">
+        <Figure class="col fade-in">
+            <img src="pictures/dublin.jpg" alt="greece zakynthos navagio shipwreck beach">
+            <figcaption><small>Life in Ireland</small><br><hr>Dublin is great.<br>Everyone come to Dublin.<br>Lots of fun in Dublin.</figcaption>
         </Figure>
 
-        <Figure>
+        <Figure class="col fade-in">
             <img src="pictures/budapest.jpg" alt="budapest city break budget">
-            <figcaption><small>Hungary</small><br><hr>Visit Budapest for an authentic, affordable European experience</figcaption>
+            <figcaption><small>Travel</small><br><hr>Visit Budapest for an<br>authentic, affordable<br>European experience</figcaption>
         </Figure>
 
-        <Figure>
+        <Figure class="col fade-in">
             <img src="pictures/iceland.jpg" alt="iceland hiking holiday trip">
-            <figcaption><small>Iceland</small><br><hr>Explore the otherworldly<br>landscapes of Iceland on<br>the Laugavegur Trail</figcaption>
+            <figcaption><small>Adventures</small><br><hr>Explore the otherworldly<br>landscapes of Iceland on<br>the Laugavegur Trail</figcaption>
         </Figure>
     </section>
 
+    <!-- About Me -->
+
+    <div class="about-me">
+        <div class="container">
+            <section class="main">
+                <img src="aboutme.png" class="slide-in from-left">
+                <Section class="slide-in from-right">
+                    <h3><strong>Welcome To Lu Pelo Mundo</strong></h3>
+                    <p>Travelling the world is what I love to do!<br>I use this blog to share my passion<br>with others who can benefit from my<br>experience. I have lived in the USA,<br>and currently live in Ireland.<br>Explore my blog for tips on how to<br>go (and stay!) abroad!!
+            </Section>
+        </section>
+    </div>
+    </div>
+    <!-- *OUT OF SERVICE 
+
+    <div class="divider"><span></span><span>Popular Posts</span><span></span></div>
+    -->
+
+    <!-- Post Slider -->
+
+    <div class="slider-container">
+        <div class="post-slider">
+            <i class="fas fa-chevron-left prev"></i>       <!-- left and right buttons-->
+            <i class="fas fa-chevron-right next"></i>
+    
+    
+            <div class="post-wrapper">
+                <div class="post">
+                    <img src="pictures/greece.jpg" alt="" class="slider-image">
+                    <div class="post-info">
+                        <h2><a>Greece</a></h2>
+                        <small>
+                        <i class="far fa-user"> Luiza Cavalcanti</i>
+                        &nbsp;
+                        <i class="far fa-calendar"> Dec 16, 2019</i>
+                        </small>
+                    </div>
+                </div>
+    
+                <div class="post">
+                    <img src="pictures/budapest.jpg" alt="" class="slider-image">
+                    <div class="post-info">
+                            <h2><a>Budapest</a></h2>
+                            <small>
+                            <i class="far fa-user"> Luiza Cavalcanti</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> Dec 16, 2019</i>
+                            </small>
+                    </div>
+                </div>
+    
+                <div class="post">
+                     <img src="pictures/dublin.jpg" alt="" class="slider-image">
+                    <div class="post-info">
+                        <h2><a>Dublin</a></h2>
+                        <small>
+                        <i class="far fa-user"> Luiza Cavalcanti</i>
+                        &nbsp;
+                        <i class="far fa-calendar"> Dec 16, 2019</i>
+                        </small>
+                    </div>
+                </div>
+    
+                <div class="post">
+                    <img src="pictures/col1.jpg" alt="" class="slider-image">
+                    <div class="post-info">
+                        <h2><a>Museums</a></h2>
+                        <small>
+                        <i class="far fa-user"> Luiza Cavalcanti</i>
+                        &nbsp;
+                        <i class="far fa-calendar"> Dec 16, 2019</i>
+                        </small>
+                    </div>
+                </div>
+    
+                <div class="post">
+                    <img src="pictures/col3.jpg" alt="" class="slider-image">
+                    <div class="post-info">
+                        <h2><a>Hi There</a></h2>
+                        <small>
+                        <i class="far fa-user"> Luiza Cavalcanti</i>
+                        &nbsp;
+                        <i class="far fa-calendar"> Dec 16, 2019</i>
+                        </small>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- /Post Slider -->
+    
+    <!-- *OUT OF SERVICE
     <div class="divider"><span></span><span>Check me out on youtube</span><span></span></div>
+    -->
 
     <div class="ytube">
             <div class="wrapper2">
@@ -93,44 +208,43 @@
             </div>
     </div>
 
-    <div class="divider"><span></span><span>Popular Posts</span><span></span></div>
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <!-- Slide One -->
-              <!-- d-none -->
-              <div class="carousel-item active" style="background-image: url('iceland1.jpeg')">
-                <div class="carousel-caption d-none d-md-block">
-                  <h3>First Slide</h3>
-                  <p>This is a description for the first slide.</p>
-                </div>
-              </div>
-              <!-- Slide Two -->
-              <div class="carousel-item" style="background-image: url('iceland2.jpeg')">
-              </div>
-              <!-- Slide Three -->
-              <div class="carousel-item" style="background-image: url('iceland3.jpeg')">
-              </div>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One -->
+          <!-- d-none -->
+          <div class="carousel-item active" style="background-image: url('pictures/iceland1.jpeg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>First Slide</h3>
+              <p>This is a description for the first slide.</p>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
-
-    <footer>
-        <p>Lu Pelo Mundo. Email: lupelomundo.zinha</p>
-
-        <ul class="social-icons">
+          <!-- Slide Two -->
+          <div class="carousel-item" style="background-image: url('pictures/iceland2.jpeg')">
+          </div>
+          <!-- Slide Three -->
+          <div class="carousel-item" style="background-image: url('pictures/iceland3.jpeg')">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+    <div class="footer-end">
+        <footer>
+            <p>Lu Pelo Mundo. Email: lupelomundo.zinha</p>
+            
+            <ul class="social-icons">
                 <a href="https://www.facebook.com/lugalvaopelomundo/" class="share-btn facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
@@ -141,7 +255,17 @@
                     <i class="fa fa-youtube"></i>
                 </a>
             </ul>
+        </footer>
+    </div>
 
-    </footer>
+    <!-- J Query-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+    <!-- Slick Carousel JS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
 
 </html>
